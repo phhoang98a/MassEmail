@@ -1,0 +1,44 @@
+.main-body {
+  background: rgba(255, 255, 266, 1) !important;
+  color: white;
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Courier New", monospace;
+  border-radius: 30px;
+  overflow-y: auto;
+  height: inherit;
+}
+
+.MuiInputBase-root {
+  border-radius: 30px !important;
+}
+
+.css-k79383-MuiButtonBase-root-MuiButton-root:hover{
+  background-color: rgba(255, 99, 71,0.8) !important;
+}
+
+.css-gx7fdi-MuiButtonBase-root-MuiButton-root:hover{
+  background-color: rgba(255, 99, 71,0.8) !important;
+}
+
+.MuiDataGrid-withBorderColor {
+  border-color: rgba(1, 1, 1, 0.6) !important;
+}
+
+.css-1r110j2-MuiButtonBase-root-MuiButton-root:hover{
+  background-color: rgba(64, 109, 89,0.8) !important;
+}
+
+@media all and (max-width: 1024px) {
+  .main-body{
+    width: 100%;
+    border-radius: 0px;
+  }
+  .subject,
+  .email{
+    width: 80%  !important;
+  }
+  
+}
