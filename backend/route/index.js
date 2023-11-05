@@ -45,7 +45,15 @@ router.post("/send-email", async(req, res)=>{
     files = req?.files?.files;
   }
   let filesName = []
-  if (files.length>0){
+  if (files?.name){
+    filesName.push(files.name)
+    const params = {
+      Bucket: process.env.S3_BUCKET_NAME,
+      Key: files.name,
+      Body: files.data 
+    };
+    await s3.upload(params).promise();
+  } else {
     for (let i=0; i<files.length; i++){
       filesName.push(files[i].name)
       const params = {
@@ -55,7 +63,7 @@ router.post("/send-email", async(req, res)=>{
       };
       await s3.upload(params).promise();
     }
-  }
+  } 
 
   let response = await axios.post('https://6d5qn4knee.execute-api.us-east-2.amazonaws.com/prod/send-email',
         {'filenames': filesName, 'content': content, 'emails':  emails, 'sender': sender, 'subject': subject})
