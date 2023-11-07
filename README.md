@@ -1,6 +1,6 @@
 # MassEmail
 
-**Speech** is a web app used to extract and aggregate emails via LinkedIn posts and send them to all emails with a single mail action.
+**MassEmail** is a web app used to extract and aggregate emails via LinkedIn posts and send them to all emails with a single mail action.
 
 Watch the demo at: [Youtube](https://www.youtube.com/watch?v=Z7Y1aJDq2z8)
 
